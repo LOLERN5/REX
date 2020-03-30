@@ -1,0 +1,23 @@
+--==+ REX +==--
+_G.Key = "" -- Put your REX Key here :D
+
+-- REX's Code --
+
+local REXKeyDatabase = loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLERN5/REX/master/REX_Database.lua"))()
+local Players = game.Players
+local LP = Players.LocalPlayer
+local REXVersion = "1.0"
+
+wait(0.1)
+
+function CheckREXKey(key)
+  for _,REXDatabase in pairs(_G.Database.AYbfIIdnWE98AXmiJ2uGttI6elVirt7UlfLQlWxn3) do
+    if key == REXDatabase then
+      return true
+    end
+  end
+end
+
+if CheckREXKey(tostring(_G.Key)) == true then
+print("REX : Key Accepted Welcome "..LP.Name.." \ REX v"..REXVersion)
+end
